@@ -1,3 +1,4 @@
+#1. Target_sell_prompt function allows you to take inputs and calculates the prices for you
 def target_sell_prompt()-> None:
 
   def get_float(prompt:str, name:str) -> float:
@@ -16,10 +17,11 @@ def target_sell_prompt()-> None:
     raise ValueError("Check and enter the commission rate again")
 
   selling_price = (target_profit + cost_price*(1+commission_rate))/(1-commission_rate)
+  percentage_increase = (selling_price-cost_price)*100/cost_price
 
-  print(f"{'-'*70}")
-  print(f"Selling price should be: ${selling_price:,.2f}")
-  print(f"{'-'*70}")
+  print(f"{'='*70}")
+  print(f"Selling price should be: ${selling_price:,.2f} at a percentage increase of {percentage_increase:,.2f}%")
+  print(f"{'='*70}")
   print(f"{'-'*70}")
   print(f"With Buying commission of: ${commission_rate*cost_price:,.2f} and Selling commission of: ${commission_rate*selling_price:,.2f}")
   print(f"{'-'*70}")
