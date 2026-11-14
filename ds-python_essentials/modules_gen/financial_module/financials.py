@@ -26,6 +26,7 @@ def target_sell_prompt()-> None:
   print(f"With Buying commission of: ${commission_rate*cost_price:,.2f} and Selling commission of: ${commission_rate*selling_price:,.2f}")
   print(f"{'-'*70}")
 
+
 #This is the parameter version of the prompt. Takes parameters instead of prompts.
 def target_sell(cost_price:float,commission_rate:float,target_profit:float)-> None:
 
@@ -42,7 +43,6 @@ def target_sell(cost_price:float,commission_rate:float,target_profit:float)-> No
   print(f"With Buying commission of: ${commission_rate*cost_price:,.2f} and Selling commission of: ${commission_rate*selling_price:,.2f}")
   print(f"{'-'*70}")
 
-if __name__ == "__main__":
-  target_sell(1278,0.015,7)
 
-
+if __name__=="__main":
+  target_sell_prompt()
